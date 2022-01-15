@@ -35,6 +35,7 @@
   unarchive:
     src: "{{ item.dest }}"
     dest: "{{ pycharm_location }}/plugins"
+    remote_src: true
   with_items: "{{ pycharm_plugins_downloaded.results }}"
 
 - name: Create PyCharm Community Edition desktop entry
